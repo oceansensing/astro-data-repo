@@ -3,7 +3,7 @@
 **The night sky**: stars, their names, the constellations and comets: a data repository of the oceansensing ocean map system, with its own
 schedule and its own place on Cloudflare R2, and no code of its own.
 
-**Nothing is published yet.** `PLAN.md` is the founding plan; `CLAUDE.md` carries what must not be
+**Published to Cloudflare R2 since 2026-10-05**, daily. `PLAN.md` is the founding plan; `CLAUDE.md` carries what must not be
 got wrong and the shared doc doctrine.
 
 ## What it publishes
