@@ -1,0 +1,35 @@
+# What this repository publishes: the night sky — the stars a naked eye sees, their names, the
+# constellations' figures, the Milky Way's outline and the Messier objects (`sky`), and the comets
+# bright enough to see in the coming month (`comets`), daily. The fetcher is the site's
+# `scripts/fetch-sky.py` and the contract its `scripts/check-sky.py`: none of these is a file the
+# website's map reads, so `test-schema.mjs` does not describe them.
+
+[contract]
+check = ["python3", "scripts/check-sky.py"]
+roots = ["python3", "scripts/check-sky.py", "--roots"]
+
+[defaults]
+timeout_minutes = 20
+
+[steps.sky]
+cmd = ["python3", "scripts/fetch-sky.py", "--only=sky"]
+lane = "cdsarc.cds.unistra.fr"
+
+[steps.comets]
+cmd = ["python3", "scripts/fetch-sky.py", "--only=comets"]
+lane = "www.minorplanetcenter.net"
+
+[products.sky]
+title = "The night sky: stars to V 6.5, their names, the constellations, the Milky Way, the Messier objects"
+step = "sky"
+roots = ["sky.json", "stars-1.json", "constellations.json", "milkyway.json", "deepsky.json"]
+writes = ["sky.json", "stars-1.json", "constellations.json", "milkyway.json", "deepsky.json"]
+namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=sky"]
+
+[products.comets]
+title = "Comets bright enough to see in the coming month (IAU Minor Planet Center)"
+step = "comets"
+roots = ["comets.json"]
+writes = ["comets.json"]
+namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=comets"]
+max_age_hours = 50
