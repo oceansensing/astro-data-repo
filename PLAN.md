@@ -1,7 +1,7 @@
 # astro-data-repo: the founding plan and running record
 
 **The night sky**: stars, their names, the constellations and comets. Created on GitHub by the owner and given its documents by the site's
-`pipeline/scaffold/new-origin.py`. **Published since 2026-10-05**, daily.
+`pipeline/scaffold/new-origin.py`. **Published since 2026-10-05**, daily from 2026-10-06.
 
 ## What it is for
 
@@ -17,5 +17,6 @@
    the build in 61 s, both products fresh, all six roots passing their
    contract, and R2 equal to the build (11 files uploaded); 8,404 stars,
    89 figures, no comet reaching magnitude 8 that day.
-2. ~~Then the daily schedule~~ — on since the same day, 06:41 UTC.
+2. ~~Then the daily schedule~~ — cron `41 6 * * *`, on since `da893c2` (pushed 2026-10-05 at about
+   06:38 UTC). That day's 06:41 slot was missed, so the first scheduled run is 2026-10-06, 06:41 UTC.
 3. A deeper star band (V 6.5 to 7.5), once its source's terms allow it.
