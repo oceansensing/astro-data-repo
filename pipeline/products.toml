@@ -33,3 +33,15 @@ roots = ["comets.json"]
 writes = ["comets.json"]
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=comets"]
 max_age_hours = 50
+
+[steps.station]
+cmd = ["python3", "scripts/fetch-sky.py", "--only=station"]
+lane = "nasa-public-data.s3.amazonaws.com"
+
+[products.station]
+title = "The International Space Station's path, the coming fortnight (NASA Johnson Space Center)"
+step = "station"
+roots = ["station.json"]
+writes = ["station.json"]
+namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=station"]
+max_age_hours = 50
