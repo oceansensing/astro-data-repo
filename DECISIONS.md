@@ -52,3 +52,23 @@ CelesTrak's own update cadence, with every other step declaring `every_hours
 = 22` so its source is asked once a day — the orchestrator's mechanism of
 the same day (a step not due is not run; its product is `carried`).
 
+## D5 — 2026-10-06 — the NGC and IC objects, a step of their own, CC BY-SA
+
+A shape readers code against: **an eleventh root, `ngc.json`** — OpenNGC's
+NGC, IC and addendum objects (duplicates, stars and the non-existent left
+out; a Messier object never), one row an object: `[id, kind, ra, dec, maj,
+min, pa, v, b, sb, hubble, z, m, name, wiki]`, OpenNGC's kind codes, axes in
+arcminutes, the position angle in degrees north through east, V and B
+magnitudes, the B surface brightness in magnitudes a square arcsecond, the
+Hubble type, the redshift, the Messier number, a common name and the English
+Wikipedia article's title — null where none — **brightest first** (V, else
+B) and the unmeasured last, so a reader cuts at its limit. **`deepsky.json`
+keeps its shape** (its readers know d3-celestial's kind codes) and is remade
+from the same rows: the Messier objects, 109 — M102 a duplicate of M101 in
+OpenNGC. **Both move to a step of their own, `deepsky`, weekly** (`every_hours
+= 166`): OpenNGC at a pinned release and one Wikidata query each for the NGC
+and the IC numbers, so the star catalog never waits on Wikidata. **Both are
+CC BY-SA 4.0**, OpenNGC's license passed on, said in each header with its
+link; `scripts/check-sky.py` fails an `ngc.json` that does not say it. The
+four objects OpenNGC's addendum names by Caldwell number go by another
+designation or their name, the Caldwell list carrying a stated copyright.

@@ -1,10 +1,11 @@
 # What this repository publishes: the night sky — the stars a naked eye sees, their names, the
-# constellations' figures, the Milky Way's outline and the Messier objects (`sky`); the comets
+# constellations' figures and the Milky Way's outline (`sky`); the NGC and IC objects, the Messier objects
+# among them (`deepsky`), weekly; the comets
 # bright enough to see in the coming month (`comets`), daily; and the International Space Station's
 # path for the coming fortnight, from NASA Johnson Space Center's ephemeris (`station`), daily; and the major
 # meteor showers, from the IAU Meteor Data Center and IMO's calendar (`meteors`); and Earth
 # satellites' elements from CelesTrak (`satellites`), every two hours — the others asked once a day
-# under the same schedule (`every_hours`). The fetcher is the site's
+# under the same schedule, the deep sky once a week (`every_hours`). The fetcher is the site's
 # `scripts/fetch-sky.py` and the contract its `scripts/check-sky.py`: none of these is a file the
 # website's map reads, so `test-schema.mjs` does not describe them.
 
@@ -20,17 +21,30 @@ cmd = ["python3", "scripts/fetch-sky.py", "--only=sky"]
 lane = "cdsarc.cds.unistra.fr"
 every_hours = 22
 
+[steps.deepsky]
+cmd = ["python3", "scripts/fetch-sky.py", "--only=deepsky"]
+lane = "query.wikidata.org"
+every_hours = 166
+
 [steps.comets]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=comets"]
 lane = "www.minorplanetcenter.net"
 every_hours = 22
 
 [products.sky]
-title = "The night sky: stars to V 6.5, their names, the constellations, the Milky Way, the Messier objects"
+title = "The night sky: stars to V 6.5, their names, the constellations, the Milky Way"
 step = "sky"
-roots = ["sky.json", "stars-1.json", "constellations.json", "milkyway.json", "deepsky.json"]
-writes = ["sky.json", "stars-1.json", "constellations.json", "milkyway.json", "deepsky.json"]
+roots = ["sky.json", "stars-1.json", "constellations.json", "milkyway.json"]
+writes = ["sky.json", "stars-1.json", "constellations.json", "milkyway.json"]
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=sky"]
+
+[products.deepsky]
+title = "The deep sky: the NGC and IC objects, the Messier objects among them (OpenNGC, CC BY-SA 4.0; names from Wikidata)"
+step = "deepsky"
+roots = ["deepsky.json", "ngc.json"]
+writes = ["deepsky.json", "ngc.json"]
+namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=deepsky"]
+max_age_hours = 400
 
 [products.comets]
 title = "Comets bright enough to see in the coming month (IAU Minor Planet Center)"
