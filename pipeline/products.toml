@@ -1,6 +1,7 @@
 # What this repository publishes: the night sky — the stars a naked eye sees, their names, the
-# constellations' figures, the Milky Way's outline and the Messier objects (`sky`), and the comets
-# bright enough to see in the coming month (`comets`), daily. The fetcher is the site's
+# constellations' figures, the Milky Way's outline and the Messier objects (`sky`); the comets
+# bright enough to see in the coming month (`comets`), daily; and the International Space Station's
+# path for the coming fortnight, from NASA Johnson Space Center's ephemeris (`station`), daily. The fetcher is the site's
 # `scripts/fetch-sky.py` and the contract its `scripts/check-sky.py`: none of these is a file the
 # website's map reads, so `test-schema.mjs` does not describe them.
 
