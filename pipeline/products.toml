@@ -32,6 +32,11 @@ cmd = ["python3", "scripts/fetch-sky.py", "--only=deepsky"]
 lane = "query.wikidata.org"
 every_hours = 166
 
+[steps.sources]
+cmd = ["python3", "scripts/fetch-sky.py", "--only=sources"]
+lane = "heasarc.gsfc.nasa.gov"
+every_hours = 166
+
 [steps.comets]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=comets"]
 lane = "www.minorplanetcenter.net"
@@ -50,6 +55,14 @@ step = "deepsky"
 roots = ["deepsky.json", "ngc.json"]
 writes = ["deepsky.json", "ngc.json"]
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=deepsky"]
+max_age_hours = 400
+
+[products.sources]
+title = "What each band sees: the brightest sources of seven catalogs, gamma rays to radio (NASA HEASARC)"
+step = "sources"
+roots = ["sources.json"]
+writes = ["sources.json"]
+namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=sources"]
 max_age_hours = 400
 
 [products.comets]
