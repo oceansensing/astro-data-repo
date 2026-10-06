@@ -159,4 +159,4 @@ jobs:
           AWS_REQUEST_CHECKSUM_CALCULATION: when_required
           AWS_RESPONSE_CHECKSUM_VALIDATION: when_required
         run: |
-          python3 code/pipeline/publish_r2.py site "$GITHUB_REPOSITORY" --r2-only
+          python3 code/pipeline/publish_r2.py site "$GITHUB_REPOSITORY" --r2-only --free map/meteors.json

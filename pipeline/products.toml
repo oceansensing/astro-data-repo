@@ -1,7 +1,8 @@
 # What this repository publishes: the night sky — the stars a naked eye sees, their names, the
 # constellations' figures, the Milky Way's outline and the Messier objects (`sky`); the comets
 # bright enough to see in the coming month (`comets`), daily; and the International Space Station's
-# path for the coming fortnight, from NASA Johnson Space Center's ephemeris (`station`), daily. The fetcher is the site's
+# path for the coming fortnight, from NASA Johnson Space Center's ephemeris (`station`), daily; and the major
+# meteor showers, from the IAU Meteor Data Center and IMO's calendar (`meteors`). The fetcher is the site's
 # `scripts/fetch-sky.py` and the contract its `scripts/check-sky.py`: none of these is a file the
 # website's map reads, so `test-schema.mjs` does not describe them.
 
@@ -45,4 +46,16 @@ step = "station"
 roots = ["station.json"]
 writes = ["station.json"]
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=station"]
+max_age_hours = 50
+
+[steps.meteors]
+cmd = ["python3", "scripts/fetch-sky.py", "--only=meteors"]
+lane = "www.ta3.sk"
+
+[products.meteors]
+title = "The major meteor showers: radiants, dates and speeds (IAU Meteor Data Center), rates (International Meteor Organization)"
+step = "meteors"
+roots = ["meteors.json"]
+writes = ["meteors.json"]
+namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=meteors"]
 max_age_hours = 50
