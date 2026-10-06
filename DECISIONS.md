@@ -36,3 +36,19 @@ parent body, and the International Meteor Organization's ZHR (`atLeast`
 where IMO writes "80+") and population index. Positions from the IAU Meteor
 Data Center, rates from IMO's calendar, both credited in the file. Held by
 the site's `scripts/check-sky.py`; published with `--free map/meteors.json`.
+
+## D4 — 2026-10-06 — Earth satellites, and two cadences under one schedule
+
+A shape readers code against: **a ninth and tenth root, `satellites.json` and
+`starlink.json`** — the US Space Force's general perturbations elements as
+CelesTrak serves them, one row a satellite: `[norad, name, id, epoch, bstar,
+incl, node, ecc, peri, anomaly, motion]`, the epoch as Unix seconds (UTC, to
+the microsecond), angles in degrees, the mean motion in revolutions a day —
+SGP4's own mean elements on TEME, for SGP4 alone; `satellites.json` adds
+each satellite's CelesTrak groups (`stations`, `visual`). Read as CSV, not
+two-line sets: the catalog passed five figures on 2026-07-11. Held by the
+site's `scripts/check-sky.py`. **And the publish runs every two hours**,
+CelesTrak's own update cadence, with every other step declaring `every_hours
+= 22` so its source is asked once a day — the orchestrator's mechanism of
+the same day (a step not due is not run; its product is `carried`).
+

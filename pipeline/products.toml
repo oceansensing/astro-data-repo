@@ -3,7 +3,8 @@
 # bright enough to see in the coming month (`comets`), daily; and the International Space Station's
 # path for the coming fortnight, from NASA Johnson Space Center's ephemeris (`station`), daily; and the major
 # meteor showers, from the IAU Meteor Data Center and IMO's calendar (`meteors`); and Earth
-# satellites' elements from CelesTrak (`satellites`). The fetcher is the site's
+# satellites' elements from CelesTrak (`satellites`), every two hours — the others asked once a day
+# under the same schedule (`every_hours`). The fetcher is the site's
 # `scripts/fetch-sky.py` and the contract its `scripts/check-sky.py`: none of these is a file the
 # website's map reads, so `test-schema.mjs` does not describe them.
 
@@ -17,10 +18,12 @@ timeout_minutes = 20
 [steps.sky]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=sky"]
 lane = "cdsarc.cds.unistra.fr"
+every_hours = 22
 
 [steps.comets]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=comets"]
 lane = "www.minorplanetcenter.net"
+every_hours = 22
 
 [products.sky]
 title = "The night sky: stars to V 6.5, their names, the constellations, the Milky Way, the Messier objects"
@@ -40,6 +43,7 @@ max_age_hours = 50
 [steps.station]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=station"]
 lane = "nasa-public-data.s3.amazonaws.com"
+every_hours = 22
 
 [products.station]
 title = "The International Space Station's path, the coming fortnight (NASA Johnson Space Center)"
@@ -52,6 +56,7 @@ max_age_hours = 50
 [steps.meteors]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=meteors"]
 lane = "www.ta3.sk"
+every_hours = 22
 
 [products.meteors]
 title = "The major meteor showers: radiants, dates and speeds (IAU Meteor Data Center), rates (International Meteor Organization)"
@@ -64,6 +69,7 @@ max_age_hours = 50
 [steps.satellites]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=satellites"]
 lane = "celestrak.org"
+every_hours = 1.5
 
 [products.satellites]
 title = "Earth satellites' elements: the space stations, the brightest and every Starlink (CelesTrak, from the US Space Force's catalog)"
