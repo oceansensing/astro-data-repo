@@ -72,3 +72,18 @@ CC BY-SA 4.0**, OpenNGC's license passed on, said in each header with its
 link; `scripts/check-sky.py` fails an `ngc.json` that does not say it. The
 four objects OpenNGC's addendum names by Caldwell number go by another
 designation or their name, the Caldwell list carrying a stated copyright.
+
+## D6 — 2026-10-06 — the sky across the spectrum, committed statics
+
+**Twelve whole-sky pictures, one a band, gamma rays to radio, committed
+under `map/spectrum/` with their index** (`index.json`: each band's id,
+name, what it shows, its wavelength, its file, size, credit and licence),
+and `[static] required = ["spectrum"]` in `pipeline/products.toml`, so the
+orchestrator's assemble copies them into every publish and refuses a run
+without them. **Statics, not products**: they are made once, by hand (the
+site's `scripts/make-spectrum.py`), from surveys that do not change; a
+remade picture takes a new file name, so a reader holding the old one is
+told by the index. `sky.json` names the index (`"spectrum":
+"spectrum/index.json"`), held by `check-sky.py`. Equirectangular on the
+ICRS, right ascension from 0 at the left, declination +90 at the top.
+
