@@ -24,3 +24,15 @@ Station's state vectors `[t, x, y, z, vx, vy, vz]` (Unix seconds, km and km/s
 on EME2000) for the coming fortnight, as NASA Johnson Space Center publishes
 them, daily. Both are held by the site's `scripts/check-sky.py`.
 
+## D3 — 2026-10-06 — The meteor showers
+
+A shape readers code against: **an eighth root, `meteors.json`** — the
+thirteen major annual showers, each with its IAU code and number, its name,
+its activity and maximum as solar longitudes on the J2000 ecliptic (the same
+in every year; a reader turns them into dates), its radiant (ICRS degrees)
+at the solar longitude `at` and its daily drift, `spread` (how far the other
+published radiants scatter about the one given), its geocentric speed, its
+parent body, and the International Meteor Organization's ZHR (`atLeast`
+where IMO writes "80+") and population index. Positions from the IAU Meteor
+Data Center, rates from IMO's calendar, both credited in the file. Held by
+the site's `scripts/check-sky.py`; published with `--free map/meteors.json`.
