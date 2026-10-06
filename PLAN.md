@@ -40,6 +40,7 @@
    step wrote the index that names them): 176 and 11,116, 23 KB and 1.36 MB,
    the newest elements 14:34 UTC; then the two-hourly cron (`41 */2 * * *`)
    with every other step at `every_hours = 22`.
-8. The satellites' doubt measured again from their own history: each
-   two-hourly publish keeps the elements, so older ones propagated against
-   newer ones.
+8. The satellites' elements measured against their own later ones — older
+   elements propagated to newer ones' epochs — from snapshots kept apart:
+   the `published` branch is one commit, force-pushed, and keeps no
+   history.
