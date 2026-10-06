@@ -52,8 +52,8 @@ namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=sky"]
 [products.deepsky]
 title = "The deep sky: the NGC and IC objects, the Messier objects among them (OpenNGC, CC BY-SA 4.0; names from Wikidata)"
 step = "deepsky"
-roots = ["deepsky.json", "ngc.json"]
-writes = ["deepsky.json", "ngc.json"]
+roots = ["deepsky.json", "ngc.json", "nebulae.json"]
+writes = ["deepsky.json", "ngc.json", "nebulae.json"]
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=deepsky"]
 max_age_hours = 400
 
