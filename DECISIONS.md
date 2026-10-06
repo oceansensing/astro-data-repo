@@ -90,15 +90,16 @@ ICRS, right ascension from 0 at the left, declination +90 at the top.
 ## D7 — 2026-10-06 — the band sources, a weekly step of their own
 
 A shape readers code against: **`sources.json`**, the brightest sources of
-seven catalogs as NASA's HEASARC serves them — `{header, columns, catalogs}`,
+nine catalogs as NASA's HEASARC and CSIRO's CASDA serve them — `{header, columns, catalogs}`,
 each catalog its `id`, the `band` of `spectrum/index.json` it belongs to, its
 title, credit and the unit of its `value`, and its rows `[name, ra, dec,
 value, kind, also]` (degrees on the ICRS; `kind` and `also` the catalog's
 own words, null where none). **A step of its own, `sources`, weekly**
 (`every_hours = 166`, its own lane), so HEASARC's TAP service is asked once
 a week and nothing else waits on it. Its cuts — Fermi at 10σ, ROSAT at 0.5
-counts a second, IRAS above 30 Jy at 60 µm, Milliquas to magnitude 17, NVSS
-above 1 Jy — keep each catalog to a few thousand; a cut moved is a change to
+counts a second, the 2MASS Redshift Survey to Ks 9, IRAS above 30 Jy at 60
+µm, Milliquas to magnitude 17, NVSS above 1 Jy and RACS-mid above 1 Jy
+south of −40° (where NVSS stops) — keep each catalog to a few thousand; a cut moved is a change to
 the site's `SOURCE_CATALOGS`, its file the same shape.
 
 ## D8 — 2026-10-06 — the nebulae beyond the NGC, in the deepsky product
@@ -129,3 +130,7 @@ Proper motions rounded to whole milliarcseconds a year. Parallax and radial
 velocity are null: the PPM gives neither. **The `sky` step moves to weekly**
 (`every_hours = 166`): its catalogs do not change, and the PPM's four files
 and the Henry Draper catalogue are 20 MB from CDS.
+
+**D6's note, the same evening**: a thirteenth picture, the near infrared
+(COBE DIRBE's zodi-subtracted 1.25, 2.2 and 3.5 µm), named by the index like
+the rest; nothing else moves.
