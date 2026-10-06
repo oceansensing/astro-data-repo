@@ -25,7 +25,7 @@ timeout_minutes = 20
 [steps.sky]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=sky"]
 lane = "cdsarc.cds.unistra.fr"
-every_hours = 22
+every_hours = 166
 
 [steps.deepsky]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=deepsky"]
@@ -43,10 +43,10 @@ lane = "www.minorplanetcenter.net"
 every_hours = 22
 
 [products.sky]
-title = "The night sky: stars to V 6.5, their names, the constellations, the Milky Way"
+title = "The night sky: stars to V 9 in three bands, their names, the constellations, the Milky Way"
 step = "sky"
-roots = ["sky.json", "stars-1.json", "constellations.json", "milkyway.json"]
-writes = ["sky.json", "stars-1.json", "constellations.json", "milkyway.json"]
+roots = ["sky.json", "stars-1.json", "stars-2.json", "stars-3.json", "constellations.json", "milkyway.json"]
+writes = ["sky.json", "stars-1.json", "stars-2.json", "stars-3.json", "constellations.json", "milkyway.json"]
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=sky"]
 
 [products.deepsky]
