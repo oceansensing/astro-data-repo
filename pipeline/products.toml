@@ -2,7 +2,8 @@
 # constellations' figures, the Milky Way's outline and the Messier objects (`sky`); the comets
 # bright enough to see in the coming month (`comets`), daily; and the International Space Station's
 # path for the coming fortnight, from NASA Johnson Space Center's ephemeris (`station`), daily; and the major
-# meteor showers, from the IAU Meteor Data Center and IMO's calendar (`meteors`). The fetcher is the site's
+# meteor showers, from the IAU Meteor Data Center and IMO's calendar (`meteors`); and Earth
+# satellites' elements from CelesTrak (`satellites`). The fetcher is the site's
 # `scripts/fetch-sky.py` and the contract its `scripts/check-sky.py`: none of these is a file the
 # website's map reads, so `test-schema.mjs` does not describe them.
 
@@ -59,3 +60,15 @@ roots = ["meteors.json"]
 writes = ["meteors.json"]
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=meteors"]
 max_age_hours = 50
+
+[steps.satellites]
+cmd = ["python3", "scripts/fetch-sky.py", "--only=satellites"]
+lane = "celestrak.org"
+
+[products.satellites]
+title = "Earth satellites' elements: the space stations, the brightest and every Starlink (CelesTrak, from the US Space Force's catalog)"
+step = "satellites"
+roots = ["satellites.json", "starlink.json"]
+writes = ["satellites.json", "starlink.json"]
+namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=satellites"]
+max_age_hours = 6
