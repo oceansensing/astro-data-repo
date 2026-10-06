@@ -77,7 +77,7 @@ designation or their name, the Caldwell list carrying a stated copyright.
 
 **Twelve whole-sky pictures, one a band, gamma rays to radio, committed
 under `map/spectrum/` with their index** (`index.json`: each band's id,
-name, what it shows, its wavelength, its file, size, credit and licence),
+name, what it shows, its wavelength, its file, size, credit and license),
 and `[static] required = ["spectrum"]` in `pipeline/products.toml`, so the
 orchestrator's assemble copies them into every publish and refuses a run
 without them. **Statics, not products**: they are made once, by hand (the
@@ -87,3 +87,45 @@ told by the index. `sky.json` names the index (`"spectrum":
 "spectrum/index.json"`), held by `check-sky.py`. Equirectangular on the
 ICRS, right ascension from 0 at the left, declination +90 at the top.
 
+## D7 — 2026-10-06 — the band sources, a weekly step of their own
+
+A shape readers code against: **`sources.json`**, the brightest sources of
+seven catalogs as NASA's HEASARC serves them — `{header, columns, catalogs}`,
+each catalog its `id`, the `band` of `spectrum/index.json` it belongs to, its
+title, credit and the unit of its `value`, and its rows `[name, ra, dec,
+value, kind, also]` (degrees on the ICRS; `kind` and `also` the catalog's
+own words, null where none). **A step of its own, `sources`, weekly**
+(`every_hours = 166`, its own lane), so HEASARC's TAP service is asked once
+a week and nothing else waits on it. Its cuts — Fermi at 10σ, ROSAT at 0.5
+counts a second, IRAS above 30 Jy at 60 µm, Milliquas to magnitude 17, NVSS
+above 1 Jy — keep each catalog to a few thousand; a cut moved is a change to
+the site's `SOURCE_CATALOGS`, its file the same shape.
+
+## D8 — 2026-10-06 — the nebulae beyond the NGC, in the deepsky product
+
+**`nebulae.json`, in `ngc.json`'s columns**, so a reader of one reads the
+other: Barnard's (1927) and Lynds' (1962) dark nebulae as `DrkN`, Lynds'
+bright nebulae (1965) as `Neb`, Sharpless's H II regions (1959) as `HII`,
+positions on the ICRS at J2000 (Lynds' and Sharpless's from their galactic
+coordinates), sizes in arcminutes, no magnitudes. **A bright nebula or H II
+region an NGC or IC nebula already marks is left out** — one whose centre
+lies within a quarter of its size, 6′ at least, of one — so the two never
+draw one cloud twice.
+Written by the `deepsky` step beside `ngc.json`, weekly; its header names
+the four catalogs, each credited.
+
+## D9 — 2026-10-06 — the fainter stars, in two bands, and the star catalog weekly
+
+**`stars-2.json` (V 6.5 to 7.5) and `stars-3.json` (7.5 to 9), in
+`stars-1.json`'s columns**, named by `sky.json`'s bands with their limits: a
+reader stops at the first band past the depth it draws, so the 146,000 stars
+past 7.5 are read only by a reader going there. The stars are the PPM's
+(the ids a million past their PPM numbers, never an HR number) with the
+Henry Draper catalogue's photovisual magnitudes and Ptg − Ptm colors where
+it measured them; where it did not, PPM's visual magnitude, else its
+photographic one less the spectral class's usual B−V, and that B−V for the
+color — a model, and each band's header counts its stars by which.
+Proper motions rounded to whole milliarcseconds a year. Parallax and radial
+velocity are null: the PPM gives neither. **The `sky` step moves to weekly**
+(`every_hours = 166`): its catalogs do not change, and the PPM's four files
+and the Henry Draper catalogue are 20 MB from CDS.
