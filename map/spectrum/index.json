@@ -1,0 +1,153 @@
+{
+ "header": {
+  "source": "Each band its own; see each credit",
+  "projection": "equirectangular, ICRS (J2000)",
+  "count": 12
+ },
+ "bands": [
+  {
+   "id": "gamma",
+   "name": "Gamma rays",
+   "detail": "Above 1 GeV · 15 years of Fermi",
+   "wave": "< 1 pm",
+   "file": "spectrum/gamma-v1.jpg",
+   "width": 4096,
+   "height": 2048,
+   "bytes": 1606637,
+   "credit": "NASA/DOE/Fermi LAT Collaboration, NASA SVS",
+   "license": "Public domain (NASA)"
+  },
+  {
+   "id": "hardxray",
+   "name": "Hard X-rays",
+   "detail": "14–195 keV · 70 months of Swift-BAT",
+   "wave": "6–90 pm",
+   "file": "spectrum/hardxray-v1.jpg",
+   "width": 2048,
+   "height": 1024,
+   "bytes": 81814,
+   "credit": "NASA Swift-BAT 70-month survey (Baumgartner et al. 2013), through SkyView",
+   "license": "Public domain (NASA)"
+  },
+  {
+   "id": "xray",
+   "name": "X-rays",
+   "detail": "¼, ¾ and 1½ keV as red, green and blue · ROSAT",
+   "wave": "0.6–10 nm",
+   "file": "spectrum/xray-v1.jpg",
+   "width": 2048,
+   "height": 1024,
+   "bytes": 864671,
+   "credit": "ROSAT All-Sky Survey diffuse maps (Snowden et al. 1997), through HEASARC SkyView",
+   "license": "Freely available (HEASARC)"
+  },
+  {
+   "id": "uv",
+   "name": "Ultraviolet",
+   "detail": "Far UV, 135–175 nm · GALEX (dark where it never looked)",
+   "wave": "135–175 nm",
+   "file": "spectrum/uv-v1.jpg",
+   "width": 4096,
+   "height": 2048,
+   "bytes": 1444724,
+   "credit": "GALEX diffuse maps (Murthy 2014), MAST",
+   "license": "Public domain (MAST)"
+  },
+  {
+   "id": "visible",
+   "name": "Visible light",
+   "detail": "The Milky Way in color · Gaia EDR3",
+   "wave": "330–1050 nm",
+   "file": "spectrum/visible-v1.jpg",
+   "width": 4096,
+   "height": 2048,
+   "bytes": 2523224,
+   "credit": "ESA/Gaia/DPAC, A. Moitinho",
+   "license": "CC BY-SA 3.0 IGO"
+  },
+  {
+   "id": "halpha",
+   "name": "H-alpha",
+   "detail": "Glowing hydrogen, 656 nm",
+   "wave": "656 nm",
+   "file": "spectrum/halpha-v1.jpg",
+   "width": 4096,
+   "height": 2048,
+   "bytes": 1158429,
+   "credit": "Finkbeiner 2003 (WHAM, VTSS, SHASSA), through SkyView and LAMBDA",
+   "license": "Free to use with credit (NASA LAMBDA)"
+  },
+  {
+   "id": "midir",
+   "name": "Mid infrared",
+   "detail": "Warm dust, 12 µm · IRAS (IRIS)",
+   "wave": "12 µm",
+   "file": "spectrum/midir-v1.jpg",
+   "width": 4096,
+   "height": 2048,
+   "bytes": 1118015,
+   "credit": "IRIS (Miville-Deschênes & Lagache 2005), IRAS, through SkyView and LAMBDA",
+   "license": "Free to use with credit (NASA LAMBDA)"
+  },
+  {
+   "id": "farir",
+   "name": "Far infrared",
+   "detail": "Cold dust, 100 µm · IRAS (IRIS)",
+   "wave": "100 µm",
+   "file": "spectrum/farir-v1.jpg",
+   "width": 4096,
+   "height": 2048,
+   "bytes": 931927,
+   "credit": "IRIS (Miville-Deschênes & Lagache 2005), IRAS, through SkyView and LAMBDA",
+   "license": "Free to use with credit (NASA LAMBDA)"
+  },
+  {
+   "id": "cmb",
+   "name": "Microwave background",
+   "detail": "The oldest light, 13.8 billion years · WMAP",
+   "wave": "3–13 mm",
+   "file": "spectrum/cmb-v1.jpg",
+   "width": 2048,
+   "height": 1024,
+   "bytes": 580666,
+   "credit": "NASA/WMAP Science Team, through SkyView and LAMBDA",
+   "license": "Public domain (NASA)"
+  },
+  {
+   "id": "microwave",
+   "name": "Microwave, 23 GHz",
+   "detail": "The Milky Way at 1.3 cm · WMAP K band",
+   "wave": "13 mm",
+   "file": "spectrum/microwave-v1.jpg",
+   "width": 2048,
+   "height": 1024,
+   "bytes": 315216,
+   "credit": "NASA/WMAP Science Team, through SkyView and LAMBDA",
+   "license": "Public domain (NASA)"
+  },
+  {
+   "id": "hi21",
+   "name": "Hydrogen, 21 cm",
+   "detail": "The Galaxy’s neutral hydrogen · LAB survey",
+   "wave": "21 cm",
+   "file": "spectrum/hi21-v1.jpg",
+   "width": 2048,
+   "height": 1024,
+   "bytes": 200719,
+   "credit": "LAB HI Survey (Kalberla et al. 2005), NASA LAMBDA",
+   "license": "Given for public use through NASA LAMBDA"
+  },
+  {
+   "id": "radio",
+   "name": "Radio, 408 MHz",
+   "detail": "Electrons spiralling in the Galaxy’s magnetic field",
+   "wave": "73 cm",
+   "file": "spectrum/radio-v1.jpg",
+   "width": 2048,
+   "height": 1024,
+   "bytes": 157673,
+   "credit": "Haslam et al. 1982, through SkyView and LAMBDA",
+   "license": "Free to use with credit (NASA LAMBDA)"
+  }
+ ]
+}

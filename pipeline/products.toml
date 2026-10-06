@@ -13,6 +13,12 @@
 check = ["python3", "scripts/check-sky.py"]
 roots = ["python3", "scripts/check-sky.py", "--roots"]
 
+# The sky's pictures across the spectrum, gamma rays to radio, committed under map/spectrum/ by
+# hand (the site's scripts/make-spectrum.py) and copied into every publish by assemble, which
+# refuses to run when they are absent.
+[static]
+required = ["spectrum"]
+
 [defaults]
 timeout_minutes = 20
 
