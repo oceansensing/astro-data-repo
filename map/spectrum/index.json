@@ -2,7 +2,7 @@
  "header": {
   "source": "Each band its own; see each credit",
   "projection": "equirectangular, ICRS (J2000)",
-  "count": 12
+  "count": 13
  },
  "bands": [
   {
@@ -76,6 +76,18 @@
    "bytes": 1158429,
    "credit": "Finkbeiner 2003 (WHAM, VTSS, SHASSA), through SkyView and LAMBDA",
    "license": "Free to use with credit (NASA LAMBDA)"
+  },
+  {
+   "id": "nearir",
+   "name": "Near infrared",
+   "detail": "Starlight through the dust, 1.25, 2.2 and 3.5 µm · COBE DIRBE",
+   "wave": "1.25–3.5 µm",
+   "file": "spectrum/nearir-v1.jpg",
+   "width": 2048,
+   "height": 1024,
+   "bytes": 327746,
+   "credit": "COBE DIRBE zodi-subtracted mission average (Hauser et al. 1998), NASA LAMBDA",
+   "license": "Public domain (NASA)"
   },
   {
    "id": "midir",
