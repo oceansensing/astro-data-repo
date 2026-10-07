@@ -1,0 +1,22 @@
+{
+ "header": {
+  "source": "Each body its own; see each credit",
+  "projection": "equirectangular, planetocentric east longitude, -180 at the left edge, 0 in the middle, north up",
+  "count": 1
+ },
+ "bodies": [
+  {
+   "id": "moon",
+   "name": "The Moon",
+   "detail": "The Lunar Reconnaissance Orbiter's camera at 643, 566 and 415 nm, its exposure and white balance set to the eye",
+   "file": "bodies/moon-v1.jpg",
+   "width": 2048,
+   "height": 1024,
+   "bytes": 457942,
+   "sha256": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170",
+   "source": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg",
+   "credit": "NASA's Scientific Visualization Studio, from the LRO camera's Hapke-normalized WAC mosaic (NASA/GSFC/Arizona State University)",
+   "license": "Public domain (NASA; the mosaic a product of LROC's PDS archive)"
+  }
+ ]
+}
