@@ -36,7 +36,8 @@ station's path and the meteor list, asked once a day; and 166 for the star
 catalog, the deep sky and the band sources, asked once a week. A step not
 due is not run, and its product is `carried` with the reason; **a product
 naming a root its last publish did not carry is due whatever its interval**
-(2026-10-07).
+(2026-10-07), and **so is a step a dispatch names** in the workflow's `due`
+input (a comma list, or `all`; 2026-10-07).
 
 **Which document gets what, and what "update docs" means across all
 twenty-five repositories, is the doctrine block at the top of `CLAUDE.md`**: the

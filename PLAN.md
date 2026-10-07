@@ -96,7 +96,7 @@
     v2.9) from CSIRO's Data Access Portal, whose collection is BSD-style
     licensed (the step stops if that license stops granting
     redistribution): 3,963 seen by radio telescopes, 421 more left out whose
-    places the catalogue states no closer than 0.1°. Built 2026-10-07; the
-    `sources` step was carried that afternoon, so its first run with them is
-    the 02:41 UTC run of 2026-10-14. The publish workflow's `force` input is
-    read by no step, so a dispatch would carry it too.
+    places the catalogue states no closer than 0.1°. Built 2026-10-07 and
+    published that evening (run 37671101844, 19:01 UTC), dispatched with the
+    publish workflow's `due` input naming the step — a step named there runs
+    whatever its `every_hours`. The `force` input is still read by no step.
