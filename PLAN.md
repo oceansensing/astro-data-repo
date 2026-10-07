@@ -49,22 +49,23 @@
    named and linked from Wikidata, and `deepsky.json` remade from the same
    rows in its first shape (109 Messier objects; d3-celestial's from SEDS
    before) — a step of its own, `deepsky`, weekly (`every_hours = 166`);
-   eleven roots. Both files CC BY-SA 4.0, OpenNGC's license passed on. Not
-   yet published.
+   eleven roots. Both files CC BY-SA 4.0, OpenNGC's license passed on.
+   First published in run 37562731957 (2026-10-07, 02:46 UTC).
 10. The sky across the spectrum — thirteen whole-sky pictures, gamma rays
     to radio, committed under `map/spectrum/` with their index (D6), made by
     hand by the site's `scripts/make-spectrum.py`: 10.8 MB, the near
-    infrared (COBE DIRBE) the thirteenth. Not yet published.
+    infrared (COBE DIRBE) the thirteenth. First published in run
+    37562731957 (2026-10-07, 02:46 UTC).
 11. The band sources — `sources.json`, the brightest of nine catalogs from
     NASA's HEASARC and CSIRO's CASDA by their TAP services (16,815 on
     2026-10-06: 2,766 Fermi sources and 117 pulsars, 1,888 Swift-BAT, 1,271
     ROSAT, 1,369 2MRS galaxies, 3,086 IRAS, 3,539 quasars and blazars, 2,206
     NVSS, 573 RACS-mid; 1.0 MB), a step of its own, `sources`, weekly (D7).
-    Not yet published.
+    First published in run 37562731957 (2026-10-07, 02:46 UTC).
 12. The nebulae beyond the NGC — `nebulae.json` in the `deepsky` product:
     Barnard's and Lynds' dark nebulae, Lynds' bright nebulae and Sharpless's
-    H II regions, 3,185 after the bright ones the NGC holds (0.3 MB; D8). Not yet
-    published.
+    H II regions, 3,185 after the bright ones the NGC holds (0.3 MB; D8).
+    First published in run 37562731957 (2026-10-07, 02:46 UTC).
 13. The fainter stars — `stars-2.json` (V 6.5 to 7.5, 18,653 stars, 1.5 MB)
     and `stars-3.json` (7.5 to 9, 109,230, 8.6 MB; 2.4 MB gzipped), the
     PPM's with the Henry Draper catalogue's magnitudes and colors; the `sky`
@@ -73,4 +74,8 @@
     they stand, and the estimated northern magnitudes are set by rank to
     Tycho-2's star counts, counted through HEASARC on 2026-10-06 (V as VT −
     0.09 (BT − VT)) — 136,287 stars to 9 with the first band's 8,404, where
-    the estimates as they stood gave 174,353. Not yet published.
+    the estimates as they stood gave 174,353. First published in run
+    37565112488 (2026-10-07, 03:16 UTC), with the index naming every file
+    above: the University of Rochester's host, where the IAU keeps its
+    star-name list, did not answer that night, and the step kept the last
+    publish's names (the site's `iau_names`).
