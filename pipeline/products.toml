@@ -1,7 +1,10 @@
 # What this repository publishes: the night sky — the stars to V 9 in three bands, their names,
 # the constellations' figures and the Milky Way's outline (`sky`); the NGC and IC objects, the Messier
 # objects among them, and the nebulae beyond the NGC (`deepsky`); the brightest sources of nine
-# catalogs, gamma rays to radio (`sources`) — these three weekly; the comets bright enough to see in
+# catalogs, gamma rays to radio, and every pulsar a radio telescope has seen whose place is known to
+# 0.1° (`sources`); the galaxies beyond our own, the 2MASS Redshift Survey's over the whole sky and the
+# Sloan Digital Sky Survey's to r 16, each with its redshift (`galaxies`) — these four weekly; the
+# comets bright enough to see in
 # the coming month (`comets`), the International Space Station's path for the coming fortnight, from
 # NASA Johnson Space Center's ephemeris (`station`), and the major meteor showers, from the IAU Meteor
 # Data Center and IMO's calendar (`meteors`), daily; and Earth satellites' elements from CelesTrak
@@ -38,6 +41,11 @@ cmd = ["python3", "scripts/fetch-sky.py", "--only=sources"]
 lane = "heasarc.gsfc.nasa.gov"
 every_hours = 166
 
+[steps.galaxies]
+cmd = ["python3", "scripts/fetch-sky.py", "--only=galaxies"]
+lane = "skyserver.sdss.org"
+every_hours = 166
+
 [steps.comets]
 cmd = ["python3", "scripts/fetch-sky.py", "--only=comets"]
 lane = "www.minorplanetcenter.net"
@@ -59,11 +67,19 @@ namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=deepsky"]
 max_age_hours = 400
 
 [products.sources]
-title = "What each band sees: the brightest sources of nine catalogs, gamma rays to radio (NASA HEASARC, CSIRO CASDA)"
+title = "What each band sees: the brightest sources of nine catalogs, gamma rays to radio, and the ATNF Pulsar Catalogue's pulsars (NASA HEASARC, CSIRO CASDA, CSIRO Data Access Portal)"
 step = "sources"
 roots = ["sources.json"]
 writes = ["sources.json"]
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=sources"]
+max_age_hours = 400
+
+[products.galaxies]
+title = "The galaxies beyond our own: the 2MASS Redshift Survey (NASA HEASARC) and SDSS DR18's spectroscopic galaxies to r 16, each with its redshift"
+step = "galaxies"
+roots = ["galaxies.json"]
+writes = ["galaxies.json"]
+namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=galaxies"]
 max_age_hours = 400
 
 [products.comets]
