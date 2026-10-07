@@ -1,9 +1,9 @@
 # astro-data-repo
 
-**The night sky**: stars, their names, the constellations, the NGC and IC objects, comets and the International Space Station's path: a data repository of the oceansensing ocean map system, with its own
+**The night sky**: the stars to V 9, their names, the constellations, the Milky Way, the NGC and IC objects and the nebulae, the brightest sources each band sees, comets, the International Space Station's path, the major meteor showers, Earth satellites' elements, and the sky across the spectrum: a data repository of the oceansensing ocean map system, with its own
 schedule and its own place on Cloudflare R2, and no code of its own.
 
-**Published to Cloudflare R2 since 2026-10-05**, daily from 2026-10-06. `PLAN.md` is the founding plan; `CLAUDE.md` carries what must not be
+**Published to Cloudflare R2 since 2026-10-05**; every two hours since 2026-10-06, each step at its own interval (`every_hours`). `PLAN.md` is the founding plan; `CLAUDE.md` carries what must not be
 got wrong and the shared doc doctrine.
 
 ## What it publishes
@@ -27,12 +27,14 @@ run time. This repository carries `pipeline/products.toml` and its publish
 workflow, and nothing else executable. Each run publishes to Cloudflare R2 alone
 (the site pipeline's D13). Related repositories: none it depends on.
 
-**Two cadences under one schedule** (2026-10-06): the workflow runs every two
-hours for the satellites' elements; every other step declares `every_hours`
-in `pipeline/products.toml` — 22 for the comets, the station's path and the
-meteor list, asked once a day, and 166 for the star catalog, the deep sky and
-the band sources, asked once a week. A step not due is not run, and its
-product is `carried` with the reason.
+**Cadences under one schedule** (2026-10-06): the workflow runs every two
+hours, and each step declares `every_hours` in `pipeline/products.toml` —
+1.5 for the satellites' elements, so every run; 22 for the comets, the
+station's path and the meteor list, asked once a day; and 166 for the star
+catalog, the deep sky and the band sources, asked once a week. A step not
+due is not run, and its product is `carried` with the reason; **a product
+naming a root its last publish did not carry is due whatever its interval**
+(2026-10-07).
 
 **Which document gets what, and what "update docs" means across all
 twenty-five repositories, is the doctrine block at the top of `CLAUDE.md`**: the

@@ -10,7 +10,7 @@ and a decision that forecloses an upstream.
 
 ## D1 — 2026-10-05 — R2 alone, with a contract of its own
 
-The night sky gets a repository of its own (2026-10-04), so that more celestial objects and fainter stars can arrive later without moving anything else, and **publishes to Cloudflare R2 alone** (2026-10-05) — the first origin to do so (the site pipeline's D13): no Pages site, and the website neither draws nor lists it. Its contract is the site's `scripts/check-sky.py`, since nothing here is a file the website's map reads. The stars are the Yale Bright Star Catalogue's, to V 6.5; a deeper band waits on its source's terms.
+The night sky gets a repository of its own (2026-10-04), so that more celestial objects and fainter stars can arrive later without moving anything else, and **publishes to Cloudflare R2 alone** (2026-10-05) — the first origin to do so (the site pipeline's D13): no Pages site, and the website neither draws nor lists it. Its contract is the site's `scripts/check-sky.py`, since nothing here is a file the website's map reads. The stars are the Yale Bright Star Catalogue's, to V 6.5; a deeper band waits on its source's terms. *(Amended by D9, 2026-10-06: two deeper bands to V 9, from the PPM and the Henry Draper catalogue.)*
 
 ## D2 — 2026-10-05 — The station's path, and the stars' parallax and radial velocity
 
@@ -75,7 +75,8 @@ designation or their name, the Caldwell list carrying a stated copyright.
 
 ## D6 — 2026-10-06 — the sky across the spectrum, committed statics
 
-**Twelve whole-sky pictures, one a band, gamma rays to radio, committed
+**Twelve whole-sky pictures, one a band, gamma rays to radio — thirteen
+since this decision's note, below — committed
 under `map/spectrum/` with their index** (`index.json`: each band's id,
 name, what it shows, its wavelength, its file, size, credit and license),
 and `[static] required = ["spectrum"]` in `pipeline/products.toml`, so the
@@ -119,7 +120,7 @@ the four catalogs, each credited.
 
 **`stars-2.json` (V 6.5 to 7.5) and `stars-3.json` (7.5 to 9), in
 `stars-1.json`'s columns**, named by `sky.json`'s bands with their limits: a
-reader stops at the first band past the depth it draws, so the 146,000 stars
+reader stops at the first band past the depth it draws, so the 109,230 stars
 past 7.5 are read only by a reader going there. The stars are the PPM's
 (the ids a million past their PPM numbers, never an HR number) with the
 Henry Draper catalogue's photovisual magnitudes and Ptg − Ptm colors where

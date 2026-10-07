@@ -1,13 +1,13 @@
-# What this repository publishes: the night sky — the stars a naked eye sees, their names, the
-# constellations' figures and the Milky Way's outline (`sky`); the NGC and IC objects, the Messier objects
-# among them (`deepsky`), weekly; the comets
-# bright enough to see in the coming month (`comets`), daily; and the International Space Station's
-# path for the coming fortnight, from NASA Johnson Space Center's ephemeris (`station`), daily; and the major
-# meteor showers, from the IAU Meteor Data Center and IMO's calendar (`meteors`); and Earth
-# satellites' elements from CelesTrak (`satellites`), every two hours — the others asked once a day
-# under the same schedule, the deep sky once a week (`every_hours`). The fetcher is the site's
-# `scripts/fetch-sky.py` and the contract its `scripts/check-sky.py`: none of these is a file the
-# website's map reads, so `test-schema.mjs` does not describe them.
+# What this repository publishes: the night sky — the stars to V 9 in three bands, their names,
+# the constellations' figures and the Milky Way's outline (`sky`); the NGC and IC objects, the Messier
+# objects among them, and the nebulae beyond the NGC (`deepsky`); the brightest sources of nine
+# catalogs, gamma rays to radio (`sources`) — these three weekly; the comets bright enough to see in
+# the coming month (`comets`), the International Space Station's path for the coming fortnight, from
+# NASA Johnson Space Center's ephemeris (`station`), and the major meteor showers, from the IAU Meteor
+# Data Center and IMO's calendar (`meteors`), daily; and Earth satellites' elements from CelesTrak
+# (`satellites`), every two hours — each step at its own interval under one schedule (`every_hours`).
+# The fetcher is the site's `scripts/fetch-sky.py` and the contract its `scripts/check-sky.py`: none
+# of these is a file the website's map reads, so `test-schema.mjs` does not describe them.
 
 [contract]
 check = ["python3", "scripts/check-sky.py"]
@@ -50,7 +50,7 @@ writes = ["sky.json", "stars-1.json", "stars-2.json", "stars-3.json", "constella
 namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=sky"]
 
 [products.deepsky]
-title = "The deep sky: the NGC and IC objects, the Messier objects among them (OpenNGC, CC BY-SA 4.0; names from Wikidata)"
+title = "The deep sky: the NGC and IC objects, the Messier objects among them, and the nebulae beyond the NGC (OpenNGC, CC BY-SA 4.0; Barnard, Lynds and Sharpless through CDS; names from Wikidata)"
 step = "deepsky"
 roots = ["deepsky.json", "ngc.json", "nebulae.json"]
 writes = ["deepsky.json", "ngc.json", "nebulae.json"]
@@ -58,7 +58,7 @@ namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=deepsky"]
 max_age_hours = 400
 
 [products.sources]
-title = "What each band sees: the brightest sources of seven catalogs, gamma rays to radio (NASA HEASARC)"
+title = "What each band sees: the brightest sources of nine catalogs, gamma rays to radio (NASA HEASARC, CSIRO CASDA)"
 step = "sources"
 roots = ["sources.json"]
 writes = ["sources.json"]
