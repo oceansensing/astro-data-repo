@@ -65,14 +65,12 @@
     Barnard's and Lynds' dark nebulae, Lynds' bright nebulae and Sharpless's
     H II regions, 3,185 after the bright ones the NGC holds (0.3 MB; D8). Not yet
     published.
-13. The fainter stars — `stars-2.json` (V 6.5 to 7.5, 19,769 stars, 1.6 MB)
-    and `stars-3.json` (7.5 to 9, 146,180, 10.7 MB; 3.0 MB gzipped), the
+13. The fainter stars — `stars-2.json` (V 6.5 to 7.5, 18,653 stars, 1.5 MB)
+    and `stars-3.json` (7.5 to 9, 109,230, 8.6 MB; 2.4 MB gzipped), the
     PPM's with the Henry Draper catalogue's magnitudes and colors; the `sky`
-    step weekly (D9); fifteen roots. **Past 8 the count runs high**, every
-    star real and none counted twice (the 175 pairs within 10″ double stars'
-    components): Tycho-2's count, asked of HEASARC on 2026-10-06 (V as VT −
-    0.09 (BT − VT)), is 26,432 to 7.5 and 130,344 to 9, where the three bands
-    hold 28,173 and 174,353 — about the sky to 9.25. A photographic magnitude
-    less a class's usual B−V scatters by a few tenths, and more stars lie
-    just past a limit than just inside it (82,089 of the 7.5–9 band's are
-    photographic). Not yet published.
+    step weekly (D9); fifteen roots. **Their counts are the sky's at every
+    tenth** (D9's note): PPM South's own magnitudes are visual and taken as
+    they stand, and the estimated northern magnitudes are set by rank to
+    Tycho-2's star counts, counted through HEASARC on 2026-10-06 (V as VT −
+    0.09 (BT − VT)) — 136,287 stars to 9 with the first band's 8,404, where
+    the estimates as they stood gave 174,353. Not yet published.

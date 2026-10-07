@@ -127,7 +127,15 @@ it measured them; where it did not, PPM's visual magnitude, else its
 photographic one less the spectral class's usual B−V, and that B−V for the
 color — a model, and each band's header counts its stars by which.
 Proper motions rounded to whole milliarcseconds a year. Parallax and radial
-velocity are null: the PPM gives neither. **The `sky` step moves to weekly**
+velocity are null: the PPM gives neither. **The estimated magnitudes are
+set by rank to Tycho-2's star counts** (ESA's Tycho-2, its counts to each
+tenth from 6.5 to 9 counted through NASA's HEASARC, `TYCHO2_COUNTS` in the
+site's `fetch-sky.py`): the measured stars keep theirs, the estimated ones
+take, in their estimates' order, the tenths that make each tenth's count
+Tycho-2's, and those past 9 leave — and PPM South's own magnitudes, found
+visual (its bright stars' within 0.04 of the Yale catalogue's photoelectric
+V), are taken as they stand. Tycho-2 is credited in the bands' `source`.
+**The `sky` step moves to weekly**
 (`every_hours = 166`): its catalogs do not change, and the PPM's four files
 and the Henry Draper catalogue are 20 MB from CDS.
 
