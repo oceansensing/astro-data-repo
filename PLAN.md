@@ -68,8 +68,11 @@
 13. The fainter stars — `stars-2.json` (V 6.5 to 7.5, 19,769 stars, 1.6 MB)
     and `stars-3.json` (7.5 to 9, 146,180, 10.7 MB; 3.0 MB gzipped), the
     PPM's with the Henry Draper catalogue's magnitudes and colors; the `sky`
-    step weekly (D9); fifteen roots. **Past 8 the count runs high**: about
-    120,000 stars are brighter than 9 and the three bands hold 174,353 — a
-    photographic magnitude less a class's usual B−V scatters by a few tenths,
-    and more stars lie just past a limit than just inside it (82,089 of the
-    7.5–9 band's are photographic). Not yet published.
+    step weekly (D9); fifteen roots. **Past 8 the count runs high**, every
+    star real and none counted twice (the 175 pairs within 10″ double stars'
+    components): Tycho-2's count, asked of HEASARC on 2026-10-06 (V as VT −
+    0.09 (BT − VT)), is 26,432 to 7.5 and 130,344 to 9, where the three bands
+    hold 28,173 and 174,353 — about the sky to 9.25. A photographic magnitude
+    less a class's usual B−V scatters by a few tenths, and more stars lie
+    just past a limit than just inside it (82,089 of the 7.5–9 band's are
+    photographic). Not yet published.
