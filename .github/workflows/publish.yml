@@ -11,6 +11,9 @@
 # (CelesTrak's own cadence; first published in run 37496156909); every other
 # step declares `every_hours = 22` in pipeline/products.toml, so its source
 # is still asked once a day.
+# **A dispatch's `due` names steps to run now** whatever their interval
+# (2026-10-07: the band sources' weekly step, for a catalogue added the day
+# after it last ran).
 #
 # Needs, from the owner: `PIPELINES_SSH_KEY` (this repository's read-only
 # deploy key on oceansensing.github.io) and the organization's R2_* secrets.
@@ -24,6 +27,10 @@ on:
         description: 'Rebuild even if the probe says the tree is current'
         type: boolean
         default: false
+      due:
+        description: 'Steps to run now whatever their every_hours (comma list, or all)'
+        type: string
+        default: ''
   schedule:
     - cron: '41 */2 * * *'
 
@@ -94,6 +101,7 @@ jobs:
         id: run
         env:
           PIPELINE_ROOT: ${{ github.workspace }}
+          PIPELINE_DUE_NOW: ${{ inputs.due }}
         run: python3 site/pipeline/orchestrate.py run
       - name: Upload the build
         if: steps.run.outputs.deploy == 'true'
