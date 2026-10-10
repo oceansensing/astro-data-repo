@@ -1,0 +1,39 @@
+{
+ "schema": 1,
+ "product": "sky",
+ "title": "The night sky: stars to V 9 in three bands, their names, the constellations, the Milky Way",
+ "fate": "carried",
+ "reason": "not due: checked 85.6 h ago, runs every 166 h",
+ "checked": "2026-10-07T03:15:47Z",
+ "updated": "2026-10-07T03:15:47Z",
+ "hour": null,
+ "modelRun": null,
+ "source": null,
+ "hours": [],
+ "files": {
+  "constellations.json": {
+   "bytes": 13947,
+   "sha256": "381d9d91a43778a4573945d21acb08c443ee5703e55b4b5fa7760ad3f635d381"
+  },
+  "milkyway.json": {
+   "bytes": 465767,
+   "sha256": "6dd9aee40eb6803291bb2c79dbbd46662573ee3673abb4403ccc6155374dd9d3"
+  },
+  "sky.json": {
+   "bytes": 575,
+   "sha256": "a990ba372cf067bb83d104084563488ffc5d79c110d4998ce435c05f7fa15617"
+  },
+  "stars-1.json": {
+   "bytes": 529148,
+   "sha256": "7b9a7753a69552a4268be0e7f498865192b1fa77905ec01770c6111eec9b98b2"
+  },
+  "stars-2.json": {
+   "bytes": 1536228,
+   "sha256": "70c111328fd7516607e8084ea910c4abb339fd6781648ca50f74d9288e56ecdf"
+  },
+  "stars-3.json": {
+   "bytes": 8627989,
+   "sha256": "cf1de80c7852353d65fe5e84fc78890f78fa5b23dc360f61fb7675a95ae6c1f1"
+  }
+ }
+}

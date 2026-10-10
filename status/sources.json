@@ -1,0 +1,19 @@
+{
+ "schema": 1,
+ "product": "sources",
+ "title": "What each band sees: the brightest sources of nine catalogs, gamma rays to radio, and the ATNF Pulsar Catalogue's pulsars (NASA HEASARC, CSIRO CASDA, CSIRO Data Access Portal)",
+ "fate": "carried",
+ "reason": "not due: checked 69.8 h ago, runs every 166 h",
+ "checked": "2026-10-07T19:01:04Z",
+ "updated": "2026-10-07T19:01:04Z",
+ "hour": null,
+ "modelRun": null,
+ "source": null,
+ "hours": [],
+ "files": {
+  "sources.json": {
+   "bytes": 1361548,
+   "sha256": "467e526cd70211a973c6881b8dd4469ba6c05b388fb6002258469e760529cafc"
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "schema": 1,
+ "product": "galaxies",
+ "title": "The galaxies beyond our own: the 2MASS Redshift Survey (NASA HEASARC) and SDSS DR18's spectroscopic galaxies to r 16, each with its redshift",
+ "fate": "carried",
+ "reason": "not due: checked 72.0 h ago, runs every 166 h",
+ "checked": "2026-10-07T16:51:13Z",
+ "updated": "2026-10-07T16:51:13Z",
+ "hour": null,
+ "modelRun": null,
+ "source": null,
+ "hours": [],
+ "files": {
+  "galaxies.json": {
+   "bytes": 7330837,
+   "sha256": "3abe0e9f773367de9ec0ba7c06b921f81550c4b01950a873e4a4e6bde417f306"
+  }
+ }
+}

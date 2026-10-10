@@ -1,0 +1,29 @@
+{
+ "schema": 1,
+ "generated": "2026-10-10T16:49:07Z",
+ "mode": "full",
+ "fates": {
+  "sky": "carried",
+  "deepsky": "carried",
+  "sources": "carried",
+  "galaxies": "carried",
+  "comets": "carried",
+  "station": "carried",
+  "meteors": "carried",
+  "satellites": "fresh"
+ },
+ "reasons": {
+  "sky": "not due: checked 85.6 h ago, runs every 166 h",
+  "deepsky": "not due: checked 86.0 h ago, runs every 166 h",
+  "sources": "not due: checked 69.8 h ago, runs every 166 h",
+  "galaxies": "not due: checked 72.0 h ago, runs every 166 h",
+  "comets": "not due: checked 3.9 h ago, runs every 22 h",
+  "station": "not due: checked 3.9 h ago, runs every 22 h",
+  "meteors": "not due: checked 3.9 h ago, runs every 22 h"
+ },
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": []
+}

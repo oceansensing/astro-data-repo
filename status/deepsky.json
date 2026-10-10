@@ -1,0 +1,27 @@
+{
+ "schema": 1,
+ "product": "deepsky",
+ "title": "The deep sky: the NGC and IC objects, the Messier objects among them, and the nebulae beyond the NGC (OpenNGC, CC BY-SA 4.0; Barnard, Lynds and Sharpless through CDS; names from Wikidata)",
+ "fate": "carried",
+ "reason": "not due: checked 86.0 h ago, runs every 166 h",
+ "checked": "2026-10-07T02:46:04Z",
+ "updated": "2026-10-07T02:46:04Z",
+ "hour": null,
+ "modelRun": null,
+ "source": null,
+ "hours": [],
+ "files": {
+  "deepsky.json": {
+   "bytes": 12885,
+   "sha256": "e8aacd788f43a9e99247e05e71f4fa05f051ddb94ab0c76bdae0dd1b588596c3"
+  },
+  "nebulae.json": {
+   "bytes": 291747,
+   "sha256": "4407c9db2ff0984b12af9c27f5824d1ec397dcdade063c0aa7acc999e4155217"
+  },
+  "ngc.json": {
+   "bytes": 1206262,
+   "sha256": "3e21a263ca122fe47d8964a969b4eb76880166f65b662c50f4fd15a0995fec03"
+  }
+ }
+}
