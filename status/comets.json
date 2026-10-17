@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "comets",
+ "title": "Comets bright enough to see in the coming month (IAU Minor Planet Center)",
+ "fate": "carried",
+ "reason": "not due: checked 3.9 h ago, runs every 22 h",
+ "checked": "2026-10-17T12:49:50Z",
+ "updated": "2026-10-17T12:49:50Z",
+ "hour": "2026-10-17T12:00Z",
+ "modelRun": null,
+ "source": "IAU Minor Planet Center",
+ "hours": [
+  "2026-10-17T12:00Z"
+ ],
+ "files": {
+  "comets.json": {
+   "bytes": 123,
+   "sha256": "f904a4547189bbd05a53c4ec6e11be9756507d51c236432f6a13892e4cbc9602"
+  }
+ }
+}
