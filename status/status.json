@@ -1,0 +1,171 @@
+{
+ "schema": 2,
+ "generated": "2026-10-24T20:45:04Z",
+ "mode": "full",
+ "run": {
+  "id": "40131131534",
+  "url": "https://github.com/oceansensing/astro-data-repo/actions/runs/40131131534"
+ },
+ "schedule": {
+  "crons": [
+   "41 */2 * * *"
+  ],
+  "longestGapHours": 2.0
+ },
+ "products": {
+  "sky": {
+   "title": "The night sky: stars to V 9 in three bands, their names, the constellations, the Milky Way",
+   "roots": [
+    "sky.json",
+    "stars-1.json",
+    "stars-2.json",
+    "stars-3.json",
+    "constellations.json",
+    "milkyway.json"
+   ],
+   "fate": "carried",
+   "reason": "not due: checked 91.6 h ago, runs every 166 h",
+   "checked": "2026-10-21T01:11:15Z",
+   "updated": "2026-10-14T02:51:44Z",
+   "hour": null,
+   "modelRun": null,
+   "source": null,
+   "hours": [],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": null,
+   "nearestOffsetHours": null
+  },
+  "deepsky": {
+   "title": "The deep sky: the NGC and IC objects, the Messier objects among them, and the nebulae beyond the NGC (OpenNGC, CC BY-SA 4.0; Barnard, Lynds and Sharpless through CDS; names from Wikidata)",
+   "roots": [
+    "deepsky.json",
+    "ngc.json",
+    "nebulae.json"
+   ],
+   "fate": "carried",
+   "reason": "not due: checked 91.6 h ago, runs every 166 h",
+   "checked": "2026-10-21T01:11:15Z",
+   "updated": "2026-10-21T01:11:15Z",
+   "hour": null,
+   "modelRun": null,
+   "source": null,
+   "hours": [],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": null,
+   "nearestOffsetHours": null
+  },
+  "sources": {
+   "title": "What each band sees: the brightest sources of nine catalogs, gamma rays to radio, and the ATNF Pulsar Catalogue's pulsars (NASA HEASARC, CSIRO CASDA, CSIRO Data Access Portal)",
+   "roots": [
+    "sources.json"
+   ],
+   "fate": "carried",
+   "reason": "not due: checked 73.9 h ago, runs every 166 h",
+   "checked": "2026-10-21T18:52:46Z",
+   "updated": "2026-10-07T19:01:04Z",
+   "hour": null,
+   "modelRun": null,
+   "source": null,
+   "hours": [],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": null,
+   "nearestOffsetHours": null
+  },
+  "galaxies": {
+   "title": "The galaxies beyond our own: the 2MASS Redshift Survey (NASA HEASARC) and SDSS DR18's spectroscopic galaxies to r 16, each with its redshift",
+   "roots": [
+    "galaxies.json"
+   ],
+   "fate": "carried",
+   "reason": "not due: checked 75.9 h ago, runs every 166 h",
+   "checked": "2026-10-21T16:50:29Z",
+   "updated": "2026-10-07T16:51:13Z",
+   "hour": null,
+   "modelRun": null,
+   "source": null,
+   "hours": [],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": null,
+   "nearestOffsetHours": null
+  },
+  "comets": {
+   "title": "Comets bright enough to see in the coming month (IAU Minor Planet Center)",
+   "roots": [
+    "comets.json"
+   ],
+   "fate": "carried",
+   "reason": "not due: checked 7.9 h ago, runs every 22 h",
+   "checked": "2026-10-24T12:50:37Z",
+   "updated": "2026-10-24T12:50:37Z",
+   "hour": "2026-10-24T12:00Z",
+   "modelRun": null,
+   "source": "IAU Minor Planet Center",
+   "hours": [
+    "2026-10-24T12:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 0.0,
+   "nearestOffsetHours": 0.0
+  },
+  "station": {
+   "title": "The International Space Station's path, the coming fortnight (NASA Johnson Space Center)",
+   "roots": [
+    "station.json"
+   ],
+   "fate": "carried",
+   "reason": "not due: checked 7.9 h ago, runs every 22 h",
+   "checked": "2026-10-24T12:50:37Z",
+   "updated": "2026-10-22T12:57:15Z",
+   "hour": null,
+   "modelRun": null,
+   "source": null,
+   "hours": [],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": null,
+   "nearestOffsetHours": null
+  },
+  "meteors": {
+   "title": "The major meteor showers: radiants, dates and speeds (IAU Meteor Data Center), rates (International Meteor Organization)",
+   "roots": [
+    "meteors.json"
+   ],
+   "fate": "held",
+   "reason": "step meteors exit 1",
+   "checked": "2026-10-19T12:58:09Z",
+   "updated": "2026-10-06T14:20:15Z",
+   "hour": null,
+   "modelRun": null,
+   "source": null,
+   "hours": [],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": null,
+   "nearestOffsetHours": null
+  },
+  "satellites": {
+   "title": "Earth satellites' elements: the space stations, the brightest and every Starlink (CelesTrak, from the US Space Force's catalog)",
+   "roots": [
+    "satellites.json",
+    "starlink.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-24T20:45:04Z",
+   "updated": "2026-10-24T20:45:04Z",
+   "hour": null,
+   "modelRun": null,
+   "source": null,
+   "hours": [],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": null,
+   "nearestOffsetHours": null
+  }
+ }
+}

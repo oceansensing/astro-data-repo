@@ -1,0 +1,19 @@
+{
+ "schema": 1,
+ "product": "meteors",
+ "title": "The major meteor showers: radiants, dates and speeds (IAU Meteor Data Center), rates (International Meteor Organization)",
+ "fate": "held",
+ "reason": "step meteors exit 1",
+ "checked": "2026-10-19T12:58:09Z",
+ "updated": "2026-10-06T14:20:15Z",
+ "hour": null,
+ "modelRun": null,
+ "source": null,
+ "hours": [],
+ "files": {
+  "meteors.json": {
+   "bytes": 3322,
+   "sha256": "b717ab810aba0c9317f952244016c87ae42967071ad91e607663c315c1e2268a"
+  }
+ }
+}
