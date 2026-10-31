@@ -1,0 +1,30 @@
+{
+ "schema": 1,
+ "generated": "2026-10-31T20:53:29Z",
+ "mode": "full",
+ "fates": {
+  "sky": "held",
+  "deepsky": "held",
+  "sources": "carried",
+  "galaxies": "carried",
+  "comets": "carried",
+  "station": "carried",
+  "meteors": "carried",
+  "satellites": "fresh"
+ },
+ "reasons": {
+  "sky": "step sky: upstream failed \u2014 ! a source failed after 4 tries: https://cdsarc.cds.unistra.fr/ftp/V/50/catalog.gz: <urlopen error timed out>",
+  "deepsky": "step deepsky: upstream failed \u2014 ! a source failed after 4 tries: https://cdsarc.cds.unistra.fr/ftp/VII/220A/barnard.dat: <urlopen error timed out>",
+  "sources": "not due: checked 73.8 h ago, runs every 166 h",
+  "galaxies": "not due: checked 75.8 h ago, runs every 166 h",
+  "comets": "not due: checked 5.9 h ago, runs every 22 h",
+  "station": "not due: checked 7.9 h ago, runs every 22 h",
+  "meteors": "not due: checked 13.9 h ago, runs every 22 h"
+ },
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": [],
+ "tile_keys": {}
+}

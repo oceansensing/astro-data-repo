@@ -1,0 +1,19 @@
+{
+ "schema": 1,
+ "product": "station",
+ "title": "The International Space Station's path, the coming fortnight (NASA Johnson Space Center)",
+ "fate": "carried",
+ "reason": "not due: checked 7.9 h ago, runs every 22 h",
+ "checked": "2026-10-31T12:53:31Z",
+ "updated": "2026-10-31T12:53:31Z",
+ "hour": null,
+ "modelRun": null,
+ "source": null,
+ "hours": [],
+ "files": {
+  "station.json": {
+   "bytes": 383547,
+   "sha256": "ab148c73988c46b1900f10153e144a74cc6c2b8f959407f86fce87da167ddaba"
+  }
+ }
+}
