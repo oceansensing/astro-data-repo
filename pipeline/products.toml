@@ -4,8 +4,8 @@
 # catalogs, gamma rays to radio, and every pulsar a radio telescope has seen whose place is known to
 # 0.1° (`sources`); the galaxies beyond our own, the 2MASS Redshift Survey's over the whole sky and the
 # Sloan Digital Sky Survey's to r 16, each with its redshift (`galaxies`) — these four weekly; the
-# comets bright enough to see in
-# the coming month (`comets`), the International Space Station's path for the coming fortnight, from
+# comets a small telescope shows, or
+# that pass near the Earth, in the coming year (`comets`), the International Space Station's path for the coming fortnight, from
 # NASA Johnson Space Center's ephemeris (`station`), and the major meteor showers, from the IAU Meteor
 # Data Center and IMO's calendar (`meteors`), daily; and Earth satellites' elements from CelesTrak
 # (`satellites`), every two hours — each step at its own interval under one schedule (`every_hours`).
@@ -83,7 +83,7 @@ namespace = ["python3", "scripts/fetch-sky.py", "--namespace", "--only=galaxies"
 max_age_hours = 400
 
 [products.comets]
-title = "Comets bright enough to see in the coming month (IAU Minor Planet Center)"
+title = "Comets a small telescope shows, or passing near the Earth, in the coming year (IAU Minor Planet Center)"
 step = "comets"
 roots = ["comets.json"]
 writes = ["comets.json"]
