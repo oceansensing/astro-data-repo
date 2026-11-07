@@ -1,0 +1,23 @@
+{
+ "schema": 1,
+ "product": "satellites",
+ "title": "Earth satellites' elements: the space stations, the brightest and every Starlink (CelesTrak, from the US Space Force's catalog)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T18:53:50Z",
+ "updated": "2026-11-07T18:53:50Z",
+ "hour": null,
+ "modelRun": null,
+ "source": null,
+ "hours": [],
+ "files": {
+  "satellites.json": {
+   "bytes": 23136,
+   "sha256": "9008d07b42b698cf3349c94ce9ed627df37e88667bbabbb24317c73fb9588f38"
+  },
+  "starlink.json": {
+   "bytes": 1396850,
+   "sha256": "98ce7e1d6f1735f1f72acdd508bf7726635e5c74662f9805110668a55cffda4b"
+  }
+ }
+}
