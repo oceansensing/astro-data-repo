@@ -41,9 +41,9 @@ naming a root its last publish did not carry is due whatever its interval**
 (2026-10-07), and **so is a step a dispatch names** in the workflow's `due`
 input (a comma list, or `all`; 2026-10-07).
 
-**Which document gets what, and what "update docs" means across all
-twenty-five repositories, is the doctrine block at the top of `CLAUDE.md`**: the
-same text in all twenty-five, held equal by the site's `check:docs`.
+**Which document gets what, and what "update docs" means across every
+repository of this project, is the doctrine block at the top of `CLAUDE.md`**: the
+same text in each, held equal by the site's `check:docs`.
 
 ## Structure
 
