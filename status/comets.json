@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "comets",
+ "title": "Comets a small telescope shows, or passing near the Earth, in the coming year (IAU Minor Planet Center)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T12:44:16Z",
+ "updated": "2026-11-28T12:44:16Z",
+ "hour": "2026-11-28T12:00Z",
+ "modelRun": null,
+ "source": "IAU Minor Planet Center",
+ "hours": [
+  "2026-11-28T12:00Z"
+ ],
+ "files": {
+  "comets.json": {
+   "bytes": 2206,
+   "sha256": "5aeb725f330da9b66b2c5480959e23ef19fde46e4f13aea0016155a66da5c7eb"
+  }
+ }
+}
